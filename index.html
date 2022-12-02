@@ -15,8 +15,18 @@
     <div id="root"></div>
     <script type="text/babel">
       //   Write Your Code Here
-      const Welcome = () => <h1>Welcome User</h1>;
-      ReactDOM.render(<Welcome />, document.getElementById("root"));
+      const Welcome = (props) => {
+        const { name, greeting } = props;
+        return (
+          <h1 className="message">
+            {greeting} {name}
+          </h1>
+        );
+      };
+      ReactDOM.render(
+        <Welcome name="Gayathri" greeting="Hello" />,
+        document.getElementById("root")
+      );
     </script>
   </body>
 </html>
